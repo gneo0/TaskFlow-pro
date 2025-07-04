@@ -73,3 +73,45 @@ export const showToast = (message, type, isLight) => {
     },
   });
 };
+
+export const getColorClasses = (color) => {
+  const colorMap = {
+    blue: {
+      bg: "bg-blue-50",
+      icon: "text-blue-600",
+      border: "border-blue-200",
+      hover: "hover:bg-blue-100",
+    },
+    green: {
+      bg: "bg-green-50",
+      icon: "text-green-600",
+      border: "border-green-200",
+      hover: "hover:bg-green-100",
+    },
+    purple: {
+      bg: "bg-purple-50",
+      icon: "text-purple-600",
+      border: "border-purple-200",
+      hover: "hover:bg-purple-100",
+    },
+    orange: {
+      bg: "bg-orange-50",
+      icon: "text-orange-600",
+      border: "border-orange-200",
+      hover: "hover:bg-orange-100",
+    },
+    pink: {
+      bg: "bg-pink-50",
+      icon: "text-pink-600",
+      border: "border-pink-200",
+      hover: "hover:bg-pink-100",
+    },
+    red: {
+      bg: "bg-red-50",
+      icon: "text-red-600",
+      border: "border-red-200",
+      hover: "hover:bg-red-100",
+    },
+  };
+  return colorMap[color];
+};

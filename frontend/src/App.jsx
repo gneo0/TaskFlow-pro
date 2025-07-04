@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import AppLayout from "./AppLayout.jsx";
+import HomePage from "./pages/HomePage.jsx";
 import AuthPage from "./pages/AuthPage.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import LoadingSpinner from "./components/common/LoadingSpinner.jsx";
@@ -20,6 +21,11 @@ const ArchivedPage = lazy(() => import("./pages/ArchivedPage.jsx"));
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <HomePage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/account",
     element: <AuthPage />,
     errorElement: <ErrorPage />,
   },
